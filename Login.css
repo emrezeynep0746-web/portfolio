@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e6e9f0, #eef2f3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.login__content {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px; /* Netter formaat */
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__header {
+  margin-bottom: 2rem;
+}
+
+.login__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #00509e;
+}
+
+.login__title span {
+  color: #009ffd;
+}
+
+.login__description {
+  font-size: 0.9rem;
+  color: #0066cc;
+  margin-top: 0.5rem;
+}
+
+.login__inputs {
+  margin-bottom: 1.2rem;
+}
+
+.login__field {
+  margin-bottom: 1rem;
+}
+
+.login__label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #004080;
+}
+
+.login__input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid rgba(0, 80, 158, 0.2);
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  transition: 0.3s;
+  outline: none;
+}
+
+.login__input:focus {
+  border-color: #009ffd;
+  box-shadow: 0 0 0 3px rgba(0, 159, 253, 0.1);
+}
+
+.login__check {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.login__check-input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.login__check-label {
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #004080;
+}
+
+/* DE KNOP - HIER GEBEURT HET */
+.login__button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700; /* Extra dik */
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  
+  /* Forceer de kleur op zwart */
+  color: #000000 !important; 
+  
+  /* Blauwe gradient achtergrond */
+  background: linear-gradient(135deg, #009ffd, #00509e) !important;
+  
+  box-shadow: 0 4px 15px rgba(0, 80, 158, 0.3);
+  text-transform: none; /* Zorgt dat het niet automatisch naar caps gaat */
+}
+
+.login__button:hover {
+  background: linear-gradient(135deg, #00509e, #009ffd) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 80, 158, 0.4);
+  color: #000000 !important; /* Altijd zwart blijven */
+}
+
+.login__button:active {
+  transform: translateY(0);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .login__content {
+    padding: 1.5rem;
+  }
+}

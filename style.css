@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --main-blue: #009ffd;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: "Poppins", sans-serif; 
+  scroll-behavior: smooth; 
+}
+
+body { 
+  background: url("mouintans.jpg") no-repeat center center fixed; 
+  background-size: cover; 
+  color: #1e1e24; 
+  overflow-x: hidden; 
+}
+
+/* Header & Navbar - Nu permanent vast en zichtbaar */
+header {
+  position: fixed; 
+  width: 100%; 
+  top: 0; 
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95); 
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 159, 253, 0.2);
+  padding: 12px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: none; /* Geen scroll overgang */
+}
+
+.logo { font-size: 1.6rem; font-weight: 700; color: #1e1e24; text-decoration: none; }
+
+.navmenu { display: flex; list-style: none; margin: 0; align-items: center; }
+.navmenu a { margin: 0 1.2rem; color: #333; font-weight: 500; text-decoration: none; transition: 0.3s; }
+.navmenu a:hover { color: var(--main-blue) !important; }
+
+.time-display {
+  color: #333;
+  font-size: 0.95rem;
+  padding: 5px 10px;
+  background: rgba(0, 159, 253, 0.1);
+  border-radius: 5px;
+}
+
+.login-nav-btn { 
+  background: var(--main-blue) !important; 
+  color: #fff !important; 
+  padding: 0.5rem 1.2rem !important; 
+  border-radius: 8px; 
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.custom-toggler { border: none; font-size: 1.8rem; color: var(--main-blue); }
+
+/* Home Section */
+.home { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; }
+.home-title { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; background: linear-gradient(to right, #1e1e24, var(--main-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.home-text h3 { color: #fff; border-left: 5px solid var(--main-blue); padding-left: 15px; }
+
+.hero-img-custom { max-width: 100%; height: auto; max-height: 550px; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3)); }
+
+.socials-icons { position: fixed; top: 40%; left: 3rem; z-index: 100; }
+.socials-icons a { display: block; margin: 20px 0; color: white; font-size: 1.8rem; transition: 0.4s ease; }
+.socials-icons a:hover { transform: translateX(10px) scale(1.2); color: var(--main-blue); }
+
+.glass-container, .about-me, .skills-section, .fun-facts {
+  background: var(--glass-bg); backdrop-filter: blur(8px); border-radius: 30px; 
+  margin: 4rem 5%; padding: 4rem 2rem;
+}
+
+.section-header { font-weight: 700; position: relative; display: inline-block; margin-bottom: 2rem; }
+.section-header::after { content: ''; position: absolute; width: 60%; height: 5px; background: var(--main-blue); bottom: -8px; left: 0; border-radius: 10px; }
+
+/* Skill colors */
+.bg-html { background-color: #E34F26 !important; }
+.bg-css { background-color: #1572B6 !important; }
+.bg-bootstrap { background-color: #7952B3 !important; }
+.bg-js { background-color: #F7DF1E !important; }
+.bg-php { background-color: #777BB4 !important; }
+.bg-sql { background-color: #336791 !important; }
+.bg-csharp { background-color: #239120 !important; }
+.bg-ts { background-color: #3178C6 !important; }
+.bg-react { background-color: #61DAFB !important; }
+
+.custom-progress { height: 14px; border-radius: 20px; background: #e9ecef; margin-bottom: 15px; overflow: hidden; }
+.progress-bar { border-radius: 20px; }
+
+.code-preview { background: #1e1e24; border-radius: 15px; }
+.fact-card { border-radius: 20px; transition: 0.4s ease; border: none; background: white; }
+.fact-card:hover { transform: translateY(-12px); background: var(--main-blue); color: white; }
+.btn-primary-gradient { background: linear-gradient(45deg, var(--main-blue), #0056b3); border: none; color: white; border-radius: 12px; padding: 12px 25px; transition: 0.3s; }
+
+.snowflake { position: fixed; top: -10px; color: white; z-index: 9999; animation: fall linear forwards; pointer-events: none; }
+@keyframes fall { to { transform: translateY(105vh); } }
+
+@media (max-width: 991px) {
+  .navmenu { flex-direction: column; text-align: center; }
+  .socials-icons { display: none !important; }
+}

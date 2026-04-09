@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emre Kayalik | Software Developer Portfolio</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg">
+    <div class="container-fluid px-lg-5">
+      <a href="#" class="logo">Emre Kayalik</a>
+      
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <i class="ph-bold ph-list"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navmenu ms-auto align-items-center">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#cv-section">CV</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
+            <div id="datetime" class="fw-bold time-display"></div>
+            <a href="login.html" class="login-nav-btn">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="home">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 home-text" data-aos="fade-right">
+          <h2 class="home-title">Emre Kayalik <i class="ph-bold ph-hand-waving"></i></h2>
+          <h3>Software Developer Apprentice</h3>
+        </div>
+        <div class="col-lg-6 home-img text-center" data-aos="zoom-in">
+          <img src="Wijzen.png" alt="Emre Kayalik" class="img-fluid hero-img-custom" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="socials-icons d-none d-md-block">
+    <a href="https://github.com/" target="_blank"><i class="ph-bold ph-github-logo"></i></a>
+    <a href="https://linkedin.com/" target="_blank"><i class="ph-bold ph-linkedin-logo"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="ph-bold ph-instagram-logo"></i></a>
+    <a href="https://x.com/" target="_blank"><i class="ph-bold ph-x-logo"></i></a>
+  </div>
+
+  <section id="about" class="about-me py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-up">
+          <img src="my.png" alt="About Me" class="img-fluid rounded shadow-lg profile-img">
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <h2 class="mb-4 section-header">About Me</h2>
+          <p>Welcome! I am Emre Kayalik, a 20-year-old student currently in my fourth year of Software Development. I prioritize accuracy, quality, and logic in every project I undertake.</p>
+          <p><strong>Strengths:</strong> Analytical, eager to learn, and calm under pressure.</p>
+          <p><strong>DISC Profile:</strong> I am a C-Type (Conscientious), focusing on making decisions based on data and facts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center mb-5 section-header">Technical Skills</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row g-4">
+            <div class="col-md-6 skill-item"><label>HTML</label><div class="progress custom-progress"><div class="progress-bar bg-html" style="width: 90%"></div></div></div>
+            <div class="col-md-6 skill-item"><label>CSS</label><div class="progress custom-progress"><div class="progress-bar bg-css" style="width: 90%"></div></div></div>
+            <div class="col-md-6 skill-item"><label>Bootstrap</label><div class="progress custom-progress"><div class="progress-bar bg-bootstrap" style="width: 85%"></div></div></div>
+            <div class="col-md-6 skill-item"><label>Javascript</label><div class="progress custom-progress"><div class="progress-bar bg-js" style="width: 85%"></div></div></div>
+            <div class="col-md-6 skill-item"><label>PHP</label><div class="progress custom-progress"><div class="progress-bar bg-php" style="width: 75%"></div></div></div>
+            <div class="col-md-6 skill-item"><label>SQL</label><div class="progress custom-progress"><div class="progress-bar bg-sql" style="width: 70%"></div></div></div>
+            <div class="col-md-6 skill-item"><label>C#</label><div class="progress custom-progress"><div class="progress-bar bg-csharp" style="width: 75%"></div></div></div>
+            <div class="col-md-6 skill-item"><label>TypeScript</label><div class="progress custom-progress"><div class="progress-bar bg-ts" style="width: 50%"></div></div></div>
+            <div class="col-md-6 skill-item"><label>React</label><div class="progress custom-progress"><div class="progress-bar bg-react" style="width: 65%"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-5">
+    <div class="container glass-container p-5 shadow-lg" data-aos="fade-up">
+      <h2 class="text-center mb-5 section-header">Featured Projects</h2>
+      
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <div class="project-card p-4 bg-white rounded shadow-sm">
+            <h4 class="fw-bold"><i class="ph ph-cpu me-2 text-primary"></i>Altium Database & Library Manager</h4>
+            <p class="text-muted small">Internship Project | C# & .NET WinForms</p>
+            <hr>
+            <p>An application serving as a bridge between Altium Designer databases and library files (.SchLib/.PcbLib) for efficient component management.</p>
+            <ul>
+              <li><strong>EF Core:</strong> Database management via Jet provider for Access.</li>
+              <li><strong>CAD Rendering:</strong> Real-time visualization using <code>AltiumSharp</code>.</li>
+              <li><strong>Smart Mapping:</strong> Automatic linking of datasheets.</li>
+            </ul>
+            <div class="d-flex gap-2">
+              <span class="badge bg-csharp">C#</span>
+              <span class="badge bg-secondary">.NET</span>
+              <span class="badge bg-info text-dark">EF Core</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <div class="code-preview p-3 bg-dark text-white rounded">
+            <pre class="small" style="max-height: 250px; overflow-y: auto;"><code>// Logic for Rendering Altium Symbols
+SchLibReader reader = new SchLibReader();
+SchLib schLib = reader.Read(filePath);
+var component = schLib.Items.OfType&lt;IComponent&gt;().FirstOrDefault();
+// Rendering code...</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5">
+
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="project-card p-4 bg-white rounded shadow-sm">
+            <h4 class="fw-bold"><i class="ph ph-file-pdf me-2 text-danger"></i>Automated Test Report Generator</h4>
+            <p class="text-muted small">Internship Project | C# & .NET</p>
+            <hr>
+            <p>A service that automatically generates professional PDF reports from complex datasets such as Excel or DataTables.</p>
+            <ul>
+              <li><strong>Dynamic PDF Creation:</strong> Using <code>PdfSharp</code>.</li>
+              <li><strong>Data Processing:</strong> Converting DataTables into reports.</li>
+              <li><strong>Automation:</strong> Automatic validation (Pass/Fail) and formatting.</li>
+            </ul>
+            <div class="d-flex gap-2">
+              <span class="badge bg-csharp">C#</span>
+              <span class="badge bg-secondary">.NET</span>
+              <span class="badge bg-primary">PdfSharp</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0 order-lg-1">
+          <div class="code-preview p-3 bg-dark text-white rounded">
+            <pre class="small" style="max-height: 250px; overflow-y: auto;"><code>// Project Logic Snippet
+public PdfDocument GenerateReport(DataTable data) {
+  var document = new PdfDocument();
+  var gfx = XGraphics.FromPdfPage(document.AddPage());
+  // Drawing logic for headers & tables...
+  return document;
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cv-section" class="container glass-container p-5 shadow-lg mt-5 text-center" data-aos="fade-up">
+    <h2 class="mb-4 section-header">Curriculum Vitae</h2>
+    <p class="mb-4">View my full background and work experience.</p>
+    <button type="button" class="btn btn-primary-gradient btn-lg px-5" data-bs-toggle="modal" data-bs-target="#cvModal">
+      <i class="ph ph-eye me-2"></i>View my CV
+    </button>
+  </section>
+
+  <section id="fun-facts" class="fun-facts py-5">
+    <div class="container text-center">
+      <h2 class="mb-5 section-header" data-aos="zoom-in">Fun Facts</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="flip-up"><div class="card fact-card p-4 shadow border-0"><h5>🎮 Gaming</h5><p>Competitive and strategy games.</p></div></div>
+        <div class="col-md-4" data-aos="flip-up" data-aos-delay="100"><div class="card fact-card p-4 shadow border-0"><h5>⚽ Sports</h5><p>Football and fitness.</p></div></div>
+        <div class="col-md-4" data-aos="flip-up" data-aos-delay="200"><div class="card fact-card p-4 shadow border-0"><h5>📚 Manhwa</h5><p>Action and supernatural stories.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container glass-container p-5 shadow-lg" data-aos="fade-up">
+      <h2 class="text-center mb-4 section-header">Contact Me</h2>
+      <div class="row">
+        <div class="col-lg-8">
+          <form action="https://formspree.io/f/emrezeynep0746@hotmail.com" method="POST" class="contact-form">
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control custom-input" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" name="_replyto" class="form-control custom-input" placeholder="Email Address" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <textarea name="message" class="form-control custom-input" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary-gradient w-100 btn-lg">Send Message</button>
+          </form>
+        </div>
+        <div class="col-lg-4">
+          <div class="contact-details-box p-4 rounded h-100 bg-light border">
+            <h5 class="fw-bold mb-4">Details</h5>
+            <p><i class="ph ph-map-pin me-2"></i> Enschede, NL</p>
+            <p><i class="ph ph-phone me-2"></i> +06 16 50 10 30</p>
+            <p><i class="ph ph-envelope me-2"></i> emrezeynep0746@hotmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="cvModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content shadow-lg" style="border-radius: 20px; overflow: hidden;">
+        <div class="modal-header border-0 bg-white">
+          <h5 class="modal-title fw-bold">CV - Emre Kayalik</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0 text-center bg-light">
+          <img src="Cv.png" class="img-fluid" alt="Full CV" oncontextmenu="return false;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
