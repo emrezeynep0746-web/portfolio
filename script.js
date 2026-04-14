@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({ duration: 1000, once: true });
 
-  // Scroll effect is hier volledig verwijderd
-
   const updateDateTime = () => {
     const datetimeElement = document.getElementById("datetime");
     if(!datetimeElement) return;

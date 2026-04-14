@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emre Kayalik test | Software Developer Portfolio</title>
+  <title>Emre Kayalik | Software Developer Portfolio</title>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -30,7 +30,6 @@
           <li><a href="#contact">Contact</a></li>
           <li class="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
             <div id="datetime" class="fw-bold time-display"></div>
-            <!-- <a href="login.html" class="login-nav-btn">Login</a> -->
           </li>
         </ul>
       </div>
@@ -123,8 +122,7 @@
             <pre class="small" style="max-height: 250px; overflow-y: auto;"><code>// Logic for Rendering Altium Symbols
 SchLibReader reader = new SchLibReader();
 SchLib schLib = reader.Read(filePath);
-var component = schLib.Items.OfType&lt;IComponent&gt;().FirstOrDefault();
-// Rendering code...</code></pre>
+var component = schLib.Items.OfType&lt;IComponent&gt;().FirstOrDefault();</code></pre>
           </div>
         </div>
       </div>
@@ -137,11 +135,10 @@ var component = schLib.Items.OfType&lt;IComponent&gt;().FirstOrDefault();
             <h4 class="fw-bold"><i class="ph ph-file-pdf me-2 text-danger"></i>Automated Test Report Generator</h4>
             <p class="text-muted small">Internship Project | C# & .NET</p>
             <hr>
-            <p>A service that automatically generates professional PDF reports from complex datasets such as Excel or DataTables.</p>
+            <p>A service that automatically generates professional PDF reports from complex datasets.</p>
             <ul>
               <li><strong>Dynamic PDF Creation:</strong> Using <code>PdfSharp</code>.</li>
               <li><strong>Data Processing:</strong> Converting DataTables into reports.</li>
-              <li><strong>Automation:</strong> Automatic validation (Pass/Fail) and formatting.</li>
             </ul>
             <div class="d-flex gap-2">
               <span class="badge bg-csharp">C#</span>
@@ -152,11 +149,8 @@ var component = schLib.Items.OfType&lt;IComponent&gt;().FirstOrDefault();
         </div>
         <div class="col-lg-6 mt-4 mt-lg-0 order-lg-1">
           <div class="code-preview p-3 bg-dark text-white rounded">
-            <pre class="small" style="max-height: 250px; overflow-y: auto;"><code>// Project Logic Snippet
-public PdfDocument GenerateReport(DataTable data) {
+            <pre class="small" style="max-height: 250px; overflow-y: auto;"><code>public PdfDocument GenerateReport(DataTable data) {
   var document = new PdfDocument();
-  var gfx = XGraphics.FromPdfPage(document.AddPage());
-  // Drawing logic for headers & tables...
   return document;
 }</code></pre>
           </div>
@@ -189,19 +183,29 @@ public PdfDocument GenerateReport(DataTable data) {
       <h2 class="text-center mb-4 section-header">Contact Me</h2>
       <div class="row">
         <div class="col-lg-8">
-          <form action="https://formspree.io/f/emrezeynep0746@hotmail.com" method="POST" class="contact-form">
+          <div id="form-status-success" class="alert alert-success d-none" data-fs-success>
+            Bedankt! Je bericht is succesvol verzonden.
+          </div>
+          <div id="form-status-error" class="alert alert-danger d-none" data-fs-error>
+            Oeps! Er ging iets mis. Controleer de velden en probeer het opnieuw.
+          </div>
+
+          <form id="my-form" class="contact-form">
             <div class="row g-3 mb-3">
               <div class="col-md-6">
-                <input type="text" name="name" class="form-control custom-input" placeholder="Your Name" required>
+                <input type="text" name="name" class="form-control custom-input" placeholder="Your Name" data-fs-field required>
+                <span class="text-danger small" data-fs-error="name"></span>
               </div>
               <div class="col-md-6">
-                <input type="email" name="_replyto" class="form-control custom-input" placeholder="Email Address" required>
+                <input type="email" name="email" class="form-control custom-input" placeholder="Email Address" data-fs-field required>
+                <span class="text-danger small" data-fs-error="email"></span>
               </div>
             </div>
             <div class="mb-3">
-              <textarea name="message" class="form-control custom-input" rows="5" placeholder="Your Message" required></textarea>
+              <textarea name="message" class="form-control custom-input" rows="5" placeholder="Your Message" data-fs-field required></textarea>
+              <span class="text-danger small" data-fs-error="message"></span>
             </div>
-            <button type="submit" class="btn btn-primary-gradient w-100 btn-lg">Send Message</button>
+            <button type="submit" id="submit-btn" class="btn btn-primary-gradient w-100 btn-lg" data-fs-submit-btn>Send Message</button>
           </form>
         </div>
         <div class="col-lg-4">
@@ -224,7 +228,7 @@ public PdfDocument GenerateReport(DataTable data) {
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body p-0 text-center bg-light">
-          <img src="Cv.png" class="img-fluid" alt="Full CV" oncontextmenu="return false;">
+          <img src="Cv.png" class="img-fluid" alt="Full CV">
         </div>
       </div>
     </div>
@@ -232,6 +236,21 @@ public PdfDocument GenerateReport(DataTable data) {
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { 
+        formElement: '#my-form', 
+        formId: 'xbdqljdd',
+        onSuccess: function() {
+            // Verberg het formulier en toon succesmelding met Bootstrap classes
+            document.getElementById('my-form').classList.add('d-none');
+            document.getElementById('form-status-success').classList.remove('d-none');
+        }
+    });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  
   <script src="script.js"></script>
 </body>
 </html>
